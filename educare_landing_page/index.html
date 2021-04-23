@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational website - Made it with lots of love!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- desktop first design -->
+    <!-- header section -->
+        <!-- notification band -->
+        <p class="notice"><i class="fas fa-exclamation"></i>SAFETY FIRST We're taking extra measures to ensure your children are safe in our camp.
+            <a href="#" class="redirect-link">LearnMore</a>
+        </p>
+        <!-- navigation bar-->
+        <section class="section hero-section" id="home">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h3 class="logo-text">EduCare</h3>
+                </div>
+                
+                <a href="#" class="nav-link display-hide" id="menu"><i class="fas fa-bars"></i></a>
+                <div class="naver">
+                    <div class="nav">
+                        <a href="#home" class="nav-link">home</a>
+                        <a href="#activities" class="nav-link">activities</a>
+                        <a href="#gallery" class="nav-link">gallery</a>
+                        <a href="#staff" class="nav-link">staff</a>
+                        <a href="#contact" class="nav-link">contact</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://facebook.com" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="title">Live to Learn   <span class="hspace">&</span>   Learn to live</h1>
+                <p class="subtitle">We care for your education. Because education is the real value for human lives. </p>
+                <div class="btn-container">
+                    <button class="cta-signup cta-btn">Register Now</button>
+                    <p class="content">Already have an account? <a href="#" class="link">SignIn</a></p>
+                </div>
+            </div>
+        </section>
+    <!-- /header section -->
+
+    <script>
+        let menuIcon = document.querySelector('#menu');
+        let menuContainer = document.querySelector('.naver');
+        let state = false;
+        menuIcon.addEventListener('click',e=>{
+            e.preventDefault();
+            if(!state){
+                menuContainer.style.display = "flex";
+                state = !state;
+            }else{
+                menuContainer.style.display = 'none';
+                state = !state;
+            }
+        });
+    </script>
+</body>
+</html>

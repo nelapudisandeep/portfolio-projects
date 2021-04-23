@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Quicksand:wght@300;700&display=swap');
+
+:root{
+--color-rich-black-fogra-29: #0d1321ff;
+--color-rich-black-fogra-29-light: #0d1321d5;
+--color-fiery-rose: #f45b69ff;
+--color-electric-lime: #ceff1aff;
+--color-misty-rose: #ffe3e0ff;
+--color-snow: #fbf5f3ff;
+--font-title:'Cinzel', serif;
+--font-text:'Quicksand', sans-serif;
+}
+
+/* presets */
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+/* typography */
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--font-title);
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    display: inline-block;
+    max-width: 100%;
+}
+
+html,body{
+    width:100%;
+    min-height: 100vh;
+    background-color: var(--color-rich-black-fogra-29);
+    scroll-behavior: smooth;
+}
+
+.notice{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:0.5rem 1rem;
+    text-align: center;
+    background-color: var(--color-electric-lime);
+    font-family: var(--font-text);
+    font-size:0.85rem;    ;
+    font-weight: bold;
+    animation:slideDown 0.4s ease-in forwards;
+}
+
+.fa-exclamation{
+    color:var(--color-fiery-rose);
+    padding:0 0.5rem;
+}
+
+.redirect-link{
+    background-color: var(--color-rich-black-fogra-29);
+    padding:0.25rem 0.5rem;
+    border-radius: 5rem;
+    text-align: center;
+    color:var(--color-electric-lime);
+}
+
+/* header section */
+.section{
+    width:100%;
+    min-height: 100vh;
+    padding:2rem 0;
+}
+
+.nav-wrapper{
+    width:100%;
+    padding:0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:2rem;
+    left:0;
+    right:0;
+}
+
+.naver{
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text{
+    font-size:2.5rem;
+    color:var(--color-snow);
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-link{
+    padding:0.5rem 0.75rem;
+    color:var(--color-fiery-rose);
+    font-size:1rem;
+    font-family: var(--font-text);
+    font-weight: bold;
+    margin:0 0.2rem;
+    border:2px solid transparent;
+    text-transform: uppercase;
+}
+
+.nav-link:hover{
+    color:var(--color-snow);
+    border:2px solid var(--color-snow);
+    transition:0.4s ease-in all;
+}
+
+.social-link{
+    font-size:1.25rem;
+    color:var(--color-snow);
+    padding:0 0.25rem;
+    margin:0.2rem;
+}
+
+.social-link:hover{
+    color:var(--color-fiery-rose);
+    transition:0.3s ease all;
+}
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-rich-black-fogra-29-light);
+    /* background-image: url('./images/ivana-cajina-dQejX2ucPBs-unsplash.jpg'); */
+    background-image: url('./images/jake-blucker-OJX7gIU3E6U-unsplash.jpg');
+    background-blend-mode: overlay;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content{
+    width:100%;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2.5rem;
+}
+
+.title{
+    font-size:2.5rem;
+    font-family: var(--font-title);
+    color:var(--color-snow);
+    padding:1.5rem 0;
+    margin:0;
+    text-align: center;
+}
+
+.subtitle{
+    max-width:50%;
+    text-align: center;
+    font-size:0.95rem;
+    font-family: var(--font-text);
+    color:var(--color-fiery-rose);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.btn-container{
+    margin-top:2.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+
+.cta-btn{
+    margin:0 0.2rem;
+    font-size:1.75rem;
+    padding:0.5rem 0.75rem;
+    font-family: var(--font-title);
+    font-weight: bold;
+    border-radius: 5px;
+    border:2px solid var(--color-fiery-rose);
+    background-color: var(--color-fiery-rose);
+    color:var(--color-snow);
+}
+
+.cta-btn:hover{
+    background:var(--color-snow);
+    color:var(--color-fiery-rose);
+    border:2px solid var(--color-snow);
+    box-shadow: 0 0 4px 1px var(--color-snow);
+    transition:0.3s ease-in all;
+}
+
+.btn-container .link{
+    color:var(--color-fiery-rose);
+    font-weight: bold;
+    font-family: var(--font-text);
+}
+
+.btn-container .link:hover{
+    text-decoration: underline;
+    transition:0.3s ease-in all;
+}
+
+
+/* media queries */
+@media screen and (max-width:880px){
+    .nav-wrapper{
+        margin-top: 2.5rem;
+        flex-direction: column;
+    }
+    .naver{
+        position: fixed;
+        top:0;
+        right:0;
+        width:40%;
+        min-height: 100vh;
+        background:var(--color-rich-black-fogra-29-light);
+        flex-direction: column;
+        display: none;
+        animation: slideLeft 0.5s ease-in forwards;
+    }
+
+    .naver .nav{
+        margin-top:2rem;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .naver .nav .nav-link{
+        margin:0.5rem 0;
+    }
+
+    #menu{
+        position: fixed;
+        top:4.75rem;
+        right:2rem;
+        display: flex;
+        align-self: flex-start;
+        z-index:111111111111;
+    }
+    
+    .logo-text{
+        font-size:1.5rem;
+    }
+
+    h1.title{
+        font-size:1.75rem;
+    }
+}
+
+/* animations */
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translateY(-100%);
+    }
+
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform: translateX(100%);
+    }
+    to{
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+/* helper classes */
+.hspace{
+    font-size:1.5rem;
+    padding:0 1.25rem
+}
+
+.content{
+    font-family: var(--font-text);
+    padding-top:1rem;
+    color:var(--color-snow);
+}
+
+.display-hide{
+    display: none;
+}
